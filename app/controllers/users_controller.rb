@@ -5,7 +5,20 @@ class UsersController < ApplicationController
     end
 
     def create 
-        @user = User.new()
+        if params[:password] == params[:password_confirmation]
+            @user = User.new(user_params)
+
+            if @user.save 
+                redirect_to user_path(@user)
+            else
+                redirect_to signup_path
+            end
+        end
+ 
+    end
+
+    def show 
+        @user = User.find(1)
     end
 
 

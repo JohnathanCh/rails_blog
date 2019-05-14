@@ -1,10 +1,14 @@
-class UsersController < ApplicationController
+class SessionsController < ApplicationController
+
+    def new
+        @user = User.new
+    end
 
     def create 
-        @user = User.new(name: params[:name])
+        @user = User.find(params[:user_id])
 
-        if @user.save 
-            redirect_to login_path
+        if @user
+            redirect_to user_path(@user)
         end
     end
 
