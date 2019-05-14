@@ -9,9 +9,9 @@
 require 'faker'
 
 
-user1 = User.create(name: Faker::TvShows::GameOfThrones.character)
-user2 = User.create(name: Faker::TvShows::GameOfThrones.character)
-user3 = User.create(name: Faker::TvShows::GameOfThrones.character)
+user1 = User.create(name: Faker::TvShows::GameOfThrones.character, age: 30, email: "test1", password: "test")
+user2 = User.create(name: Faker::TvShows::GameOfThrones.character, age: 18, email: "test2", password: "test")
+user3 = User.create(name: Faker::TvShows::GameOfThrones.character, age: 17, email: "test3", password: "test")
 
 
 
