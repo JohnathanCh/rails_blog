@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   post "/posts", to: "posts#create"
   get "/posts/:id", to: "posts#show", as: 'post'
 
-  get "/users/:id", to: "users#show", as: "user"
-  get "/users/new", to: "users#new", as: "new_user"
+  get "/signup", to: "sessions#new", as: "singup"
+
   post "/users", to: "users#create"
+  get "/users/:id", to: "users#show", as: "user"
 
   get "/login", to: "sessions#new", as: "login"
   post "/login", to: "sessions#create"

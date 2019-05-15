@@ -1,8 +1,9 @@
-<h1> new user page </h1>
-
 <%= form_for @user do |f| %>
     <%= f.label :name, "name" %>
     <%= f.text_field :name %>
+
+    <%= f.label :age, "age" %>
+    <%= f.text_field :age %>
 
     <%= f.label :email, "email" %>
     <%= f.text_field :email %>

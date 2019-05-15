@@ -2134,3 +2134,208 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/posts" for 127.0.0.1 at 2019-05-15 18:59:28 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 43ms (Views: 40.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/singup" for 127.0.0.1 at 2019-05-15 19:11:57 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/singup"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/signup" for 127.0.0.1 at 2019-05-15 19:12:19 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 283ms (Views: 259.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2019-05-15 19:12:53 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2019-05-15 19:15:02 -0400
+  
+SyntaxError (/Users/admin/Development/code/blog/app/controllers/sessions_controller.rb:6: syntax error, unexpected ':', expecting end
+        render: signup
+              ^):
+  
+app/controllers/sessions_controller.rb:6: syntax error, unexpected ':', expecting end
+Started GET "/signup" for 127.0.0.1 at 2019-05-15 19:15:16 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/signup.html.erb within layouts/application
+  Rendered sessions/signup.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 39ms (Views: 27.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2019-05-15 19:21:57 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+LoadError (cannot load such file -- pry):
+  
+app/controllers/sessions_controller.rb:1:in `<main>'
+Started GET "/signup" for 127.0.0.1 at 2019-05-15 19:23:54 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/signup.html.erb within layouts/application
+  Rendered sessions/signup.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 236ms (Views: 218.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2019-05-15 19:24:42 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/signup.html.erb within layouts/application
+  Rendered sessions/signup.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-05-15 19:25:02 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vaLM9nU/WyOZ/t5gCnKniL9GdHiqCMtkl2W2P+3JAktz36KKy4Ro/i9QQyYc/PxSYhblJcIKNgGAM4dd/OVfpg==", "user"=>{"name"=>"test", "age"=>"20", "email"=>"test@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "test"], ["age", 20], ["email", "test@mail.com"], ["password_digest", "$2a$10$7i0B/YruQqd1ogI1lLLjYuBYE/oyTBpNWDeLuhOdzcOV7YI2PCy5O"], ["created_at", "2019-05-15 23:25:02.396106"], ["updated_at", "2019-05-15 23:25:02.396106"]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+Redirected to http://127.0.0.1:3000/users/4
+Completed 302 Found in 107ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2019-05-15 19:25:02 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 46ms (Views: 39.4ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-05-15 19:26:40 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vaLM9nU/WyOZ/t5gCnKniL9GdHiqCMtkl2W2P+3JAktz36KKy4Ro/i9QQyYc/PxSYhblJcIKNgGAM4dd/OVfpg==", "user"=>{"name"=>"test", "age"=>"20", "email"=>"test@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Started GET "/signup" for 127.0.0.1 at 2019-05-15 19:28:52 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/signup.html.erb within layouts/application
+  Rendered sessions/signup.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 252ms (Views: 233.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-05-15 19:29:10 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dgfYdkN834hgRlc+ia9zpqDrQ3A59Mtbx53kqppXIEi4erYK/cfsVdboynifISh8fbvSLVH2Nj7Qy9XIi3t9pQ==", "user"=>{"name"=>"test", "age"=>"20", "email"=>"test@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Unpermitted parameter: :password_confirmation
+Unpermitted parameter: :password_confirmation
+Unpermitted parameter: :password_confirmation
+Started GET "/signup" for 127.0.0.1 at 2019-05-15 19:32:13 -0400
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "test"], ["age", 20], ["email", "test@mail.com"], ["password_digest", "$2a$10$Gu3SKYHRvsro/.NZXv5XTuZ7dlWU/vi9RaeUwyEbABuvSIWWs7Ele"], ["created_at", "2019-05-15 23:32:19.432358"], ["updated_at", "2019-05-15 23:32:19.432358"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14
+Redirected to http://127.0.0.1:3000/users/5
+Completed 302 Found in 189260ms (ActiveRecord: 1.9ms)
+
+
+Processing by SessionsController#new as HTML
+  Rendering sessions/signup.html.erb within layouts/application
+  Rendered sessions/signup.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 48ms (Views: 35.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2019-05-15 19:32:22 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/signup.html.erb within layouts/application
+  Rendered sessions/signup.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-05-15 19:32:38 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ygboTOWmwxVzTrfsQXnoclEU/RhpXUj1u+1+w7NaFGgEe4YwWx3wyMXgKqpX97OojERsRQFftZCsu0+honZJhQ==", "user"=>{"name"=>"test", "age"=>"20", "email"=>"test@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "test"], ["age", 20], ["email", "test@mail.com"], ["password_digest", "$2a$10$q/1724Ezf8tju074E.aA2OH/ScV7GQPViBkcVowdR8Xl.tyE0S8Ea"], ["created_at", "2019-05-15 23:33:05.345542"], ["updated_at", "2019-05-15 23:33:05.345542"]]
+  ↳ (pry):6
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "test"], ["age", 20], ["email", "test@mail.com"], ["password_digest", "$2a$10$3k9l1P7kE8YPaOLUVkeWuu8fCK8qsH/92AgFnySDIqiqg4hNZ5HuG"], ["created_at", "2019-05-15 23:34:03.181376"], ["updated_at", "2019-05-15 23:34:03.181376"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://127.0.0.1:3000/users/7
+Completed 302 Found in 84497ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2019-05-15 19:34:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 82ms (Views: 53.0ms | ActiveRecord: 2.8ms)
+
+
