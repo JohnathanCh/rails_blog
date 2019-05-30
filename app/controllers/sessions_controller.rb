@@ -1,25 +1,30 @@
 require 'pry'
 class SessionsController < ApplicationController
+    include SessionsHelper
 
     def new
         @user = User.new
 
-        render :signup
+        render :login
     end
 
     def create 
-        binding.pry
-        @user = User.find_by(email: params[:email])
-        if @user
-            session[:user_id] = @user.id
+        @user = User.find_by(email: params[:session][:email])
+        if @user && @user.authenticate(params[:session][:password])
+
+            # login(@user) comes from the sessions_helper.rb
+            # session[:user_id] = @user.id
+            
+            log_in(@user)
             redirect_to user_path(@user)
         else
-            @user = User.new(name: params[:name], age: params[:age], email: params[:email], password: params[:password])
-
-            session[:user_id] = @user.id
-
-            redirect_to user_path(@user)
+            flash.now[:danger] = 'Invalid email/password combination'
+            render :new
         end
+    end
+
+    def destroy 
+        session.clear
     end
 
 end

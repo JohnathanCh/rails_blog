@@ -9,10 +9,10 @@ class UsersController < ApplicationController
     def create 
 
         if user_params[:password] == user_params[:password_confirmation]
-            # binding.pry
             @user = User.new(user_params)
 
             if @user.save 
+                session[:user_id] = @user.id
                 redirect_to user_path(@user)
             else
                 redirect_to signup_path
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     end
 
     def show 
-        @user = User.find(1)
+        @user = User.find(session[:user_id])
     end
 
 
