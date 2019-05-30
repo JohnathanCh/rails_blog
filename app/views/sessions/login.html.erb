@@ -1,0 +1,13 @@
+<%= form_for(:session, url: login_path) do |f| %>
+
+    <%= f.label :email, "email" %>
+    <%= f.email_field :email, class: "form-control" %>
+
+    <%= f.label :password, "password"  %>
+    <%= f.password_field :password, class: "form-control" %>
+
+    <%= f.submit "Submit"%>
+        
+<% end %>
+
+<p>New user? <%= link_to "Sign up now!", signup_path %></p>
