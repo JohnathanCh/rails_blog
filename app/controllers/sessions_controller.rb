@@ -11,10 +11,6 @@ class SessionsController < ApplicationController
     def create 
         @user = User.find_by(email: params[:session][:email])
         if @user && @user.authenticate(params[:session][:password])
-
-            # login(@user) comes from the sessions_helper.rb
-            # session[:user_id] = @user.id
-            
             log_in(@user)
             redirect_to user_path(@user)
         else
